@@ -7,8 +7,7 @@ function Hero() {
         FRONTEND <br /> DEVELOPER
       </h2>
       <p className="text-xl md:text-3xl lg:text-3xl w-4/5 mx-auto mb-3">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ducimus
-        perspiciatis ut accusantium nulla
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem doloribus, officiis provident rerum odit dolore?
       </p>
       <button className="text-lg px-3 py-2 secondary-bg rounded-lg uppercase accent-lt font-semibold">Contact me</button>
     </section>

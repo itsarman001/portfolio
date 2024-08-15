@@ -21,6 +21,21 @@
   color: var(--dark);
 }
 
+.primary-bg-hover {
+  background-color: var(--primary);
+  color: var(--dark);
+
+  &:hover {
+    background-color: var(--dark);
+    color: var(--primary);
+  }
+
+  &:hover .dark-bg {
+    background-color: var(--primary);
+    color: var(--dark);
+  }
+}
+
 .secondary-bg {
   background-color: var(--seconday);
   color: var(--dark);
@@ -34,13 +49,14 @@
 .accent-bg {
   background-color: var(--accent);
   color: --dark;
+
+  &:hover {
+    background-color: var(--primary);
+    color: var(--dark);
+  }
 }
 
 .accent-lt {
   background-color: var(--accent-lt);
   color: var(--dark);
-
-  &:hover {
-    background-color: var(--accent);
-  }
 }

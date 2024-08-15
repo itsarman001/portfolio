@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { NAVIGATION_LINKS, SOCIAL_LINKS } from "../constants";
-import { motion } from "framer-motion"
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,7 +10,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex items-center justify-between w-full py-3 px-5 relative">
+    <nav className="flex items-center justify-between w-full py-3 px-5 relative primary-bg">
       {/* Desktop Menu */}
       <div className="hidden lg:flex items-center justify-between w-full">
         <ul className="flex gap-2 items-center justify-between">
@@ -50,7 +49,7 @@ function Navbar() {
           )}
         </button>
         {isMobileMenuOpen && (
-          <div className="fixed top-0 left-0 right-0 py-10 px-5 mx-5 lg:hidden flex items-center justify-between flex-col gap-3">
+          <div className="fixed top-0 left-0 right-0 py-10 px-5 mx-5 lg:hidden flex items-center justify-between flex-col gap-3 primary-bg">
             <ul className=" flex items-center flex-col justify-between gap-4 uppercase">
               {NAVIGATION_LINKS.map((item, index) => (
                 <li
