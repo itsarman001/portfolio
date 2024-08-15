@@ -4,34 +4,43 @@
 @tailwind components;
 @tailwind utilities;
 
-* { 
+* {
   font-family: "Inter Tight", sans-serif;
 }
 
 :root {
-  --primary: #e8e8e8;
-  --dark: black;
-  --light: white;
-  --grey: #747474;
-  --border: #dbdbdb; 
+  --primary: #eeeeee;
+  --seconday: #e9e2da;
+  --dark: #0d0c0c;
+  --accent-lt: #fe7a41;
+  --accent: #ff4c01;
 }
 
-.backgroud {
+.primary-bg {
   background-color: var(--primary);
-}
-
-.darkBg {
-  background-color: var(--dark);
-}
-
-.lightBg {
-  background-color: var(--light);
-}
-
-.darkText {
   color: var(--dark);
 }
 
-.lightText {
-  color: var(--light);
+.secondary-bg {
+  background-color: var(--seconday);
+  color: var(--dark);
+}
+
+.dark-bg {
+  background-color: var(--dark);
+  color: var(--primary);
+}
+
+.accent-bg {
+  background-color: var(--accent);
+  color: --dark;
+}
+
+.accent-lt {
+  background-color: var(--accent-lt);
+  color: var(--dark);
+
+  &:hover {
+    background-color: var(--accent);
+  }
 }

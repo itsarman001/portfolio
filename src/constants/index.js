@@ -1,6 +1,6 @@
 export const NAVIGATION_LINKS = [
-  { label: "Works", to: "/Works" },
   { label: "About", to: "/About" },
+  { label: "Works", to: "/Works" },
   { label: "Skills", to: "/Skills" },
 ];
 

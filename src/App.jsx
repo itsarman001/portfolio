@@ -1,11 +1,12 @@
 import React from "react";
-import {Navbar} from "./components"
+import {Navbar, Hero, About} from "./components"
 
 const App = () => {
   return (
-    <div className="background w-screen">
+    <div className="primary-bg w-dvw min-h-dvh">
       <Navbar/>
-      
+      <Hero/>
+      <About/>
     </div>
   );
 };
