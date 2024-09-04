@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import Home from './pages/Home'
 const App = () => {
   return (
-    <div>Started Desiging Portfolio from scratch</div>
-  )
-}
+  <>
+  <Home/>
+  </>
+)
+};
 
-export default App
+export default App;
