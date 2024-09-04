@@ -1,9 +1,11 @@
 import React from "react";
-import Home from './pages/Home'
+import {Hero, About} from './pages'
 const App = () => {
   return (
   <>
-  <Home/>
+  <Hero/>
+  <About/>
+
   </>
 )
 };

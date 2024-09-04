@@ -16,47 +16,26 @@
   --accent: #ff4c01;
 }
 
-.primary-bg {
-  background-color: var(--primary);
-  color: var(--dark);
+.navBtn-container {
+  display: inline-block;
+  cursor: pointer;
+  
 }
-
-.primary-bg-hover {
-  background-color: var(--primary);
-  color: var(--dark);
-
-  &:hover {
-    background-color: var(--dark);
-    color: var(--primary);
-  }
-
-  &:hover .dark-bg {
-    background-color: var(--primary);
-    color: var(--dark);
-  }
+.bar1, .bar2, .bar3 {
+  
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
-
-.secondary-bg {
-  background-color: var(--seconday);
-  color: var(--dark);
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
 }
-
-.dark-bg {
-  background-color: var(--dark);
-  color: var(--primary);
+.change .bar2 {
+  opacity: 0;
+  transform: translateX(-200%)
 }
-
-.accent-bg {
-  background-color: var(--accent);
-  color: --dark;
-
-  &:hover {
-    background-color: var(--primary);
-    color: var(--dark);
-  }
-}
-
-.accent-lt {
-  background-color: var(--accent-lt);
-  color: var(--dark);
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
 }

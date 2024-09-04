@@ -1,7 +1,7 @@
 import React from "react";
 import { Heading } from "../components";
 
-function Home() {
+function Hero() {
   const paragraph =
     "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, similique!";
   return (
@@ -20,4 +20,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Hero;

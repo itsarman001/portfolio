@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
 
 function NavBtn() {
+  const animate = (e) => e.classList.toggle("change");
   return (
-    <div className='flex items-center justify-end'>
-      <div className='flex items-center bg-white w-10'></div>
+    <div className="navBtn-container" onClick={()=> animate(e)}>
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
-  )
+  );
 }
 
-export default NavBtn
+export default NavBtn;
