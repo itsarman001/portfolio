@@ -1,13 +1,12 @@
-import React from "react";
-import {Hero, About} from './pages'
-const App = () => {
+import React from 'react'
+
+function App() {
+
   return (
-  <>
-  <Hero/>
-  <About/>
+    <>
+      <div>Hello, World!</div>
+    </>
+  )
+}
 
-  </>
-)
-};
-
-export default App;
+export default App
