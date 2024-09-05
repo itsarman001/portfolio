@@ -3,15 +3,21 @@ import { useUserContext } from "../../context/userContext";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const { NAVIGATION_LINK } = useUserContext();
-  return <nav>
-    <div><h4>Portfolio</h4></div>
-    <ul>
-        {NAVIGATION_LINK.map((item)=>(
-            <li><Link to={item.href}>{item.label}</Link></li>
+  const { NAVIGATION_LINKS } = useUserContext(); // Fix the variable name here
+  return (
+    <nav>
+      <div>
+        <h4>Portfolio</h4>
+      </div>
+      <ul>
+        {NAVIGATION_LINKS.map((item) => (
+          <li key={item.label}>
+            <Link to={item.href}>{item.label}</Link>
+          </li>
         ))}
-    </ul>
-  </nav>;
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;
