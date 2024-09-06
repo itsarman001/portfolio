@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav>
       <div>
-        <h4>Portfolio</h4>
+        <Link to="/"><h4>Portfolio</h4></Link>
       </div>
       <ul>
         {NAVIGATION_LINKS.map((item) => (

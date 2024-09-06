@@ -1,6 +1,6 @@
 export const USER = {
     fullName: "Arman",
-    intro: "",
+    intro: "Hello World",
     aboutMe: "",
     email: "",
 }
