@@ -44,12 +44,12 @@ export const SOCIAL_LINKS = [
   {
     label: "X",
     href: "",
-    icon: < FaXTwitter/>,
+    icon: <FaXTwitter />,
   },
   {
     label: "GITHUB",
     href: "",
-    icon: < FaGithub/>,
+    icon: <FaGithub />,
   },
 ];
 

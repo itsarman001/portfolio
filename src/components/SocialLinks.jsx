@@ -1,11 +1,12 @@
 import React from "react";
-import { useUserContext } from "../context/userContext";
 
-function SocialLinks() {
-  const { SOCIAL_LINKS } = useUserContext();
-  return (<ul>
-    {SOCIAL_LINKS.map((item)=> ())}
-  </ul>)
+function SocialLinks({ href, icon, label, className = "" }) {
+  return (
+    <a href={href} className={`${className}`} target="_blank">
+      <span>{icon}</span>
+      <span>{label}</span>
+    </a>
+  );
 }
 
 export default SocialLinks;
