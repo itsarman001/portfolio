@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const { NAVIGATION_LINKS } = useUserContext(); // Fix the variable name here
   return (
-    <nav className="flex items-center justify-between px-3 py-2 absolute top-0 w-full">
+    <nav className="flex items-center justify-between px-5 py-4 absolute top-0 w-full">
       <div>
         <Link to="/">
           <h4 className="flex items-center gap-1 curve-font">
@@ -15,7 +15,7 @@ function Navbar() {
           </h4>
         </Link>
       </div>
-      <ul className="flex items-end gap-4">
+      <ul className="md:flex items-end gap-6 hidden">
         {NAVIGATION_LINKS.map((item) => (
           <li key={item.label}>
             <Link to={item.href}>{item.label}</Link>

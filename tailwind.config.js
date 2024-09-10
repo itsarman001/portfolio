@@ -7,13 +7,13 @@ export default {
       secondary: "#284B63",
       disable: "#D9D9D9",
       accent: "#3C6E71",
-      text: "#353535"
+      text: "#353535",
     },
     extend: {
       fontSize: {
-        "10xl": '8.5rem',
+        "10xl": "8.5rem",
       },
     },
   },
-  plugins: [],
+  plugins: ["@tailwindcss/prettier-plugin"],
 };
