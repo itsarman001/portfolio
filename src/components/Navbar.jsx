@@ -1,5 +1,6 @@
 import React from "react";
-import { useUserContext } from "../../context/userContext";
+import { useUserContext } from "../context/userContext";
+import { FaRegCopyright } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -7,7 +8,12 @@ function Navbar() {
   return (
     <nav className="flex items-center justify-between px-3 py-2 absolute top-0 w-full">
       <div>
-        <Link to="/"><h4>Portfolio</h4></Link>
+        <Link to="/">
+          <h4 className="flex items-center gap-1 curve-font">
+            <FaRegCopyright />
+            <span>Code by Arman</span>
+          </h4>
+        </Link>
       </div>
       <ul className="flex items-end gap-4">
         {NAVIGATION_LINKS.map((item) => (

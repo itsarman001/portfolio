@@ -2,20 +2,21 @@ import React from "react";
 import { Accordian } from "./index";
 import { useUserContext } from "../context/userContext";
 
-
-function Projects() {
-    const {WORKS} = useUserContext()
+function Projects({ className = "" }) {
+  const { WORKS } = useUserContext();
   return (
-    <section>
+    <section className={` ${className}`}>
       <div>
         <p>001. Works</p>
       </div>
       <div>
-        <ul>{WORKS.map((work)=>(
+        <ul>
+          {WORKS.map((work) => (
             <li key={work.title}>
-                <Accordian accordianData={work}/>
+              <Accordian accordianData={work} />
             </li>
-        ))}</ul>
+          ))}
+        </ul>
       </div>
     </section>
   );

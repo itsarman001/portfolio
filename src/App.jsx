@@ -1,8 +1,8 @@
 import React from "react";
 import { UserContextProvider } from "./context/userContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components";
-import { Home, About, Work, Contact } from "./pages";
+import { Navbar,  Footer } from "./components";
+import { Home, About, Work, Contact, } from "./pages";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route path="/works" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </UserContextProvider>
   );
