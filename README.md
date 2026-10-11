@@ -1,80 +1,36 @@
-# 🚀 My Portfolio
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Welcome to my personal portfolio repository! This project showcases my work, skills, and experience through a modern, responsive, and dynamic web application.
+## Getting Started
 
-## 🔗 Live Preview
+First, run the development server:
 
-[View Portfolio](https://your-portfolio-link.com) _(Replace with your actual link)_
-
-## 🛠 Tech Stack
-
-- **Framework**: React (Vite)
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **UI Components**: Shadcn Ui, Lucide React
-- **Linting**: ESLint
-- **Development Tools**: Vite, Yarn
-
-## 📁 Folder Structure
-
-```sh
-Portfolio
-├── public
-│   └── vite.svg
-├── src
-│   ├── App.jsx
-│   ├── assets
-│   │   └── react.svg
-│   ├── components
-│   │   ├── ui
-│   │   │   └── button.jsx
-│   ├── lib
-│   │   └── utils.js
-│   ├── index.css
-│   ├── main.jsx
-├── .gitignore
-├── components.json
-├── eslint.config.js
-├── index.html
-├── jsconfig.json
-├── package.json
-├── README.md
-├── vite.config.js
-├── yarn.lock
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 🌟 Features
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- **Fast & Optimized**: Built with Vite for blazing-fast performance.
-- **Modern UI**: Styled using Tailwind CSS and Shadcn UI components.
-- **Reusable Components**: A structured component-based approach.
-- **Animations**: Smooth page transitions and animations with Framer Motion.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📦 Installation & Setup
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. Clone the repository:
+## Learn More
 
-   ```sh
-   git clone https://github.com/itsarman001/portfolio.git
-   cd portfolio
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-2. Install dependencies:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-   ```sh
-   yarn
-   ```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-3. Start the development server:
+## Deploy on Vercel
 
-   ```sh
-   yarn dev
-   ```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-4. Open [http://localhost:5173](http://localhost:5173) (default Vite port) in your browser.
-
----
-
-Feel free to contribute or suggest improvements! 🚀
-
----
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
