@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { about } from "@/data/about";
+import { GithubIcon } from "@/components/icons/GithubIcon";
+import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { Mail } from "lucide-react";
+
+import { about } from "@/data/about";
 
 export const Hero = () => {
   return (
@@ -23,16 +26,33 @@ export const Hero = () => {
         </div>
         <div className="flex items-center gap-2 text-sm">
           <Button className="rounded-sm">Resume</Button>
-          <Button variant="ghost" className="rounded-sm">
-            <a href={`mailto:${about?.socialLinks?.email}`}>
+
+          <Button asChild variant="ghost" size="icon" className="rounded-sm">
+            <a href={`mailto:${about?.socialLinks?.email}`} aria-label="Email">
               <Mail />
             </a>
           </Button>
-          <Button variant="ghost" className="rounded-sm">
-            Github
+
+          <Button asChild variant="ghost" className="rounded-sm">
+            <a
+              href={about?.socialLinks?.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <GithubIcon className="size-[18px]" />
+            </a>
           </Button>
-          <Button variant="ghost" className="rounded-sm">
-            Linkedin
+
+          <Button asChild variant="ghost" className="rounded-sm">
+            <a
+              href={about?.socialLinks?.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <LinkedinIcon className="size-[18px]" />
+            </a>
           </Button>
         </div>
       </div>
