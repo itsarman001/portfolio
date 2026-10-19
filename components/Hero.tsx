@@ -1,59 +1,72 @@
-import { Button } from "@/components/ui/button";
-import { GithubIcon } from "@/components/icons/GithubIcon";
-import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { Mail } from "lucide-react";
 
+import { Button, buttonVariants } from "@/components/ui/button";
+import { GithubIcon } from "@/components/icons/GithubIcon";
+import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
+import { cn } from "@/lib/utils";
+
 import { about } from "@/data/about";
+
+const socials = [
+  {
+    label: "Email",
+    href: `mailto:${about.social.email}`,
+    Icon: Mail,
+    external: false,
+  },
+  {
+    label: "GitHub",
+    href: about.social.github,
+    Icon: GithubIcon,
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    href: about.social.linkedin,
+    Icon: LinkedinIcon,
+    external: true,
+  },
+];
 
 export const Hero = () => {
   return (
     <section className="pt-12">
       <div className="space-y-2">
         <p className="text-base font-normal text-muted-foreground">
-          hi there👋, I'm
+          hi there👋, I&apos;m
         </p>
         <div>
           <h1 className="text-4xl font-bold tracking-tight text-primary/90">
-            {about?.name}
+            {about.name}
           </h1>
-          <h2 className="flex flex-col gap-0 text-base font-normal text-primary/90">
+          <div className="flex flex-col gap-0 text-base font-normal text-primary/90">
             <p>20 he/him</p>
             <p>
               Passionate about building high-performance and scalable web
               applications.
             </p>
-          </h2>
+          </div>
         </div>
         <div className="flex items-center gap-2 text-sm">
           <Button className="rounded-sm">Resume</Button>
 
-          <Button asChild variant="ghost" size="icon" className="rounded-sm">
-            <a href={`mailto:${about?.socialLinks?.email}`} aria-label="Email">
-              <Mail />
-            </a>
-          </Button>
-
-          <Button asChild variant="ghost" className="rounded-sm">
+          {socials.map(({ label, href, Icon, external }) => (
             <a
-              href={about?.socialLinks?.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
+              key={label}
+              href={href}
+              aria-label={label}
+              className={cn(
+                buttonVariants({ variant: "ghost", size: "icon" }),
+                "rounded-sm",
+              )}
+              {...(external && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
             >
-              <GithubIcon className="size-[18px]" />
+              <Icon className="size-[18px]" />
             </a>
-          </Button>
-
-          <Button asChild variant="ghost" className="rounded-sm">
-            <a
-              href={about?.socialLinks?.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <LinkedinIcon className="size-[18px]" />
-            </a>
-          </Button>
+          ))}
         </div>
       </div>
     </section>
