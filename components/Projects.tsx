@@ -2,10 +2,13 @@ import { ArrowUpRight } from "lucide-react";
 
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { projects } from "@/data/projects";
+import { about } from "@/data/about";
 
-const GITHUB_URL = "https://github.com/itsarman001";
+const GITHUB_URL = about.social.github || "https://github.com/itsarman001";
 
 export const Projects = () => {
+  const visibleProjects = projects.filter((project) => project.show);
+
   return (
     <section id="projects-section" className="py-10">
       <SectionHeading>projects.</SectionHeading>
@@ -15,7 +18,7 @@ export const Projects = () => {
           projects.length > 3 ? "grid md:grid-cols-2" : "flex flex-col"
         } gap-12 text-base font-normal text-primary/90`}
       >
-        {projects.map((project) => {
+        {visibleProjects.map((project) => {
           const links = [
             { label: "Live Preview", href: project.links.live },
             { label: "Source Code", href: project.links.source },

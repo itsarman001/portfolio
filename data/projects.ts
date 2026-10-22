@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: "krafon",
+    show: true,
 
     name: "Krafon",
 
@@ -31,6 +32,7 @@ export const projects = [
 
   {
     id: "crewbase",
+    show: true,
 
     name: "Crewbase",
 
@@ -67,6 +69,7 @@ export const projects = [
 
   {
     id: "quick-links",
+    show: false,
 
     name: "Quick Links",
 
