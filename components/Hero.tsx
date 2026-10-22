@@ -1,11 +1,13 @@
 import { Mail } from "lucide-react";
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
-import { cn } from "@/lib/utils";
+import { XIcon } from "@/components/icons/XIcon";
 
 import { about } from "@/data/about";
+import { getCurrentAge } from "@/lib/getCurrentAge";
+import { cn } from "@/lib/utils";
 
 const socials = [
   {
@@ -26,9 +28,16 @@ const socials = [
     Icon: LinkedinIcon,
     external: true,
   },
+  {
+    label: "X",
+    href: about.social.twitter,
+    Icon: XIcon,
+    external: true,
+  },
 ];
 
-export const Hero = () => {
+export const Hero = async () => {
+  const age = await getCurrentAge(about.birthDate);
   return (
     <section className="pt-12">
       <div className="space-y-2">
@@ -40,15 +49,19 @@ export const Hero = () => {
             {about.name}
           </h1>
           <div className="flex flex-col gap-0 text-base font-normal text-primary/90">
-            <p>20 he/him</p>
-            <p>
-              Passionate about building high-performance and scalable web
-              applications.
-            </p>
+            <p>{age} he/him</p>
+            <p>{about.tagline}</p>
           </div>
         </div>
         <div className="flex items-center gap-2 text-sm">
-          <Button className="rounded-sm">Resume</Button>
+          <a
+            href={about.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(buttonVariants(), "rounded-sm")}
+          >
+            Resume
+          </a>
 
           {socials.map(({ label, href, Icon, external }) => (
             <a
