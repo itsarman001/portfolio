@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
+import { TooltipWrapper } from "@/components/shared/TooltipWrapper";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { XIcon } from "@/components/icons/XIcon";
@@ -14,24 +15,28 @@ const socials = [
     label: "Email",
     href: `mailto:${about.social.email}`,
     Icon: Mail,
+    tooltip: "Send me an email",
     external: false,
   },
   {
     label: "GitHub",
     href: about.social.github,
     Icon: GithubIcon,
+    tooltip: "View my GitHub profile",
     external: true,
   },
   {
     label: "LinkedIn",
     href: about.social.linkedin,
     Icon: LinkedinIcon,
+    tooltip: "Connect on LinkedIn",
     external: true,
   },
   {
     label: "X",
     href: about.social.twitter,
     Icon: XIcon,
+    tooltip: "Follow me on X",
     external: true,
   },
 ];
@@ -54,31 +59,34 @@ export const Hero = async () => {
           </div>
         </div>
         <div className="flex items-center gap-2 text-sm">
-          <a
-            href={about.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(buttonVariants(), "rounded-sm")}
-          >
-            Resume
-          </a>
-
-          {socials.map(({ label, href, Icon, external }) => (
+          <TooltipWrapper content="View or download my resume">
             <a
-              key={label}
-              href={href}
-              aria-label={label}
-              className={cn(
-                buttonVariants({ variant: "ghost", size: "icon" }),
-                "rounded-sm",
-              )}
-              {...(external && {
-                target: "_blank",
-                rel: "noopener noreferrer",
-              })}
+              href={about.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(buttonVariants(), "rounded-sm")}
             >
-              <Icon className="size-[18px]" />
+              Resume
             </a>
+          </TooltipWrapper>
+
+          {socials.map(({ label, href, Icon, tooltip, external }) => (
+            <TooltipWrapper key={label} content={tooltip}>
+              <a
+                href={href}
+                aria-label={label}
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "rounded-sm",
+                )}
+                {...(external && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
+              >
+                <Icon className="size-[18px]" />
+              </a>
+            </TooltipWrapper>
           ))}
         </div>
       </div>
