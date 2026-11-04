@@ -20,6 +20,7 @@ export const Projects = () => {
       >
         {visibleProjects.map((project) => {
           const links = [
+            { label: "Landing Page", href: project.links.landing },
             { label: "Live Preview", href: project.links.live },
             { label: "Source Code", href: project.links.source },
           ].filter((link) => link.href);
