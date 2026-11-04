@@ -8,9 +8,9 @@ const LINKS = [
 export const Header = () => {
   return (
     <header className="flex justify-between items-end">
-      <h1 className="tracking-tighter font-bold text-xl text-primary/90 cursor-pointer">
+      <span className="tracking-tighter font-bold text-xl text-primary/90 cursor-pointer">
         Arman
-      </h1>
+      </span>
       <nav className="flex items-center gap-2.5">
         <ul className="flex items-center gap-2">
           {LINKS.map((link) => (

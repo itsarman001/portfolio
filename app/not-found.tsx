@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (
@@ -11,9 +20,9 @@ export default function NotFound() {
           404, page not found
         </p>
 
-        <h1 className="text-4xl font-bold tracking-tight text-primary/90">
+        <h2 className="text-4xl font-bold tracking-tight text-primary/90">
           Nothing here.
-        </h1>
+        </h2>
 
         <p className="text-base font-normal text-primary/90">
           The page you&apos;re looking for doesn&apos;t exist or has moved.
