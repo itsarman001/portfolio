@@ -25,7 +25,8 @@ export const projects = [
     ],
 
     links: {
-      live: "",
+      landing: "https://krafon.com/",
+      live: "https://app.krafon.com/",
       source: "",
     },
   },
@@ -34,7 +35,7 @@ export const projects = [
     id: "crewbase",
     show: true,
 
-    name: "Crewbase",
+    name: "Crewbase (In Progress)",
 
     status: "In Progress",
 
@@ -62,8 +63,9 @@ export const projects = [
     ],
 
     links: {
+      landing: "",
       live: "",
-      source: "",
+      source: "https://github.com/itsarman001/crewbase.git",
     },
   },
 
@@ -97,6 +99,7 @@ export const projects = [
     ],
 
     links: {
+      landing: "",
       live: "https://qwklink.vercel.app/",
       source: "https://github.com/itsarman001/Quick-Link",
     },
