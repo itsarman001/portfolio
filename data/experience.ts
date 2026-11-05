@@ -13,7 +13,7 @@ export const experiences = [
       type: "Full-time",
       location: "Kolkata, West Bengal",
       startDate: "Jan 2025",
-      endDate: "Oct 2026",
+      endDate: "Aug 2026",
     },
 
     responsibilities: [
