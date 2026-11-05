@@ -4,7 +4,7 @@ export const experiences = [
 
     company: {
       name: "Wiseboxs Softworks Pvt Ltd (formerly WiseBoxs Technologies)",
-      website: "https://wiseboxs.com/",
+      website: "https://www.linkedin.com/company/wiseboxs/",
     },
 
     role: "Frontend Developer",
@@ -13,7 +13,7 @@ export const experiences = [
       type: "Full-time",
       location: "Kolkata, West Bengal",
       startDate: "Jan 2025",
-      endDate: "Oct 2026",
+      endDate: "Aug 2026",
     },
 
     responsibilities: [
