@@ -4,7 +4,7 @@ export const experiences = [
 
     company: {
       name: "Wiseboxs Softworks Pvt Ltd (formerly WiseBoxs Technologies)",
-      website: "https://wiseboxs.com/",
+      website: "https://www.linkedin.com/company/wiseboxs/",
     },
 
     role: "Frontend Developer",
