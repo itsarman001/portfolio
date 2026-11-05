@@ -1,17 +1,17 @@
 export const about = {
   name: "Md Arman",
-  role: "Frontend Developer",
+  role: "Software Developer",
 
   birthDate: "2000-05-22",
 
   tagline:
-    "Building responsive, user-focused web interfaces with Vue, Nuxt, and React.",
+    "Building scalable web applications, intuitive interfaces, and robust end-to-end systems.",
 
   summary:
-    "Self-taught frontend developer who spent nearly two years shipping production features at Wiseboxs Softworks. I build responsive, user-focused interfaces across the full frontend lifecycle: feature implementation, API integration, UI bug resolution, and UX improvements. My English Literature background shapes how I design: structure and clarity first, then the fine detail.",
+    "Software Developer with nearly two years of production experience shipping live SaaS, project management, and ed-tech applications. I work across the full product lifecycle from API integration and complex state management to secure backend design and performance tuning. With a background in English Literature, I prioritize high-clarity communication, clean code structure, and thoughtful user experience in everything I build.",
 
   expertise:
-    "I work primarily with Vue 3, Nuxt, TypeScript, and Tailwind CSS, and I'm expanding into React, Next.js, Node.js, and PostgreSQL. I enjoy building reusable interfaces and accessible design systems with tools like Vuetify and ShadCN UI. Open to frontend and full-stack roles at product-first companies.",
+    "Experienced in component-driven architecture, state management, relational databases, authentication workflows, and modern web protocols. Stack-agnostic problem solver quick to adapt to any technology, ecosystem, or production requirements.",
 
   resume: "/resume.pdf",
 
