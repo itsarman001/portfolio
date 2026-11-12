@@ -7,7 +7,7 @@ import { LinkedinIcon } from "@/components/icons/LinkedinIcon";
 import { XIcon } from "@/components/icons/XIcon";
 
 import { about } from "@/data/about";
-import { getCurrentAge } from "@/lib/getCurrentAge";
+// import { getCurrentAge } from "@/lib/getCurrentAge";
 import { cn } from "@/lib/utils";
 
 const socials = [
@@ -42,7 +42,7 @@ const socials = [
 ];
 
 export const Hero = async () => {
-  const age = await getCurrentAge(about.birthDate);
+  // const age = await getCurrentAge(about.birthDate);
   return (
     <section className="pt-12">
       <div className="space-y-2">
@@ -54,7 +54,8 @@ export const Hero = async () => {
             {about.name}
           </h1>
           <div className="flex flex-col gap-0 text-base font-normal text-primary/90">
-            <p>{age} he/him</p>
+            {/* <p>{age} he/him</p> */}
+            <p>{about.role}</p>
             <p>{about.tagline}</p>
           </div>
         </div>
